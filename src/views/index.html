@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
+        <title>Aspect Ratio Test</title>
         <meta name="theme-color" content="#fff">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -27,6 +27,62 @@
     </head>
     <body>
         @@include("../blocks/modules/header/header.html")
+
+
+        <div class="container">
+        <section class="gallery">
+            <div class="col">
+            <figure style="height: 100%;object-fit:cover">
+                <img data-src="http://placekitten.com/300/201" />
+                <div class="with-overlay"></div>
+            </figure>
+            </div>
+            <div class="col">
+            <figure class="" data-aspect-ratio="16:9">
+                <img data-src="http://placekitten.com/110/202" />
+                <div class="with-overlay"></div>
+            </figure>
+            <figure class="" data-aspect-ratio="16:9">
+                <img data-src="http://placekitten.com/300/203" />
+                <div class="with-overlay"></div>
+            </figure>
+            </div>
+        </section>
+        
+        <section>
+            <h3>16:9 - 300x200px</h3>
+            <figure class="" data-aspect-ratio="16:9">
+            <img data-src="http://placekitten.com/300/200" />
+            <div class="with-overlay"></div>
+            </figure>
+        </section>
+        <section>
+            <h3>9:16 - 200x300px</h3>
+            <figure data-aspect-ratio="9:16">
+            <img data-src="http://placekitten.com/200/300" />
+            <div class="with-overlay"></div>
+            </figure>
+        </section>  
+        
+        <hr />
+        
+            <section>
+            <h3>16:9 - 200x300px</h3>
+            <figure data-aspect-ratio="16:9">
+            <img data-src="http://placekitten.com/200/300" />
+            <div class="with-overlay"></div>
+            </figure>
+        </section>
+        
+        <section>
+            <h3>9:16 - 300x200px</h3>
+            <figure data-aspect-ratio="9:16">
+            <img src="http://placekitten.com/300/200" />
+            <div class="with-overlay"></div>
+            </figure>
+        </section>  
+        </div>
+
         @@include("../blocks/modules/footer/footer.html")
         <script src="../js/main.js"></script>
         <script src="../js/vendor.js"></script>
